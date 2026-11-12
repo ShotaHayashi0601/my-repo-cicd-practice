@@ -1,0 +1,9 @@
+name: GITHUB_ENV
+run-name: GITHUB_ENV by @${{ github.actor }} # ワークフロー実行名の指定
+on: push
+jobs:
+  share:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "RESULT=hello" >> "${GITHUB_ENV}" # GITHUB_ENVへ書き出し
+      - run: echo "${RESULT}" # 通常の環境変数として参照
