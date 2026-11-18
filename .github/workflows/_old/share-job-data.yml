@@ -15,4 +15,3 @@ jobs:
       - env:
           RESULT: ${{ needs.before.outputs.result }} # 依存ジョブの出力値を参照
         run: echo "${RESULT}"
-　
